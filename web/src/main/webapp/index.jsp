@@ -1,28 +1,91 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 3/8/2019
-  Time: 10:11 AM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+
 <html>
+
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Sign in</title>
 
 </head>
-<body>
-<form action="login" method=" post">
 
-    Username: <input type="text" name="user">
-    <br>
-    Password: <input type="password" name="pwd">
-    <br>
-    <input type="submit" value="Login">
+
+<body class=bg-secondary>
+
+<form action="login" method="post">
+
+    <div class="container bg-light">
+        <div class="jumbotron text-center bg-dark text-white">
+            <h1>Login<br></h1>
+
+            <div class="row">
+                <div class="col">
+                </div>
+                <div class="col text-center">
+
+                    <input type="text" name="user" class="form-control" placeholder="Username">
+
+                    <input type="password" class="form-control" name="pwd" placeholder="Password">
+
+                </div>
+                <div class="col">
+                </div>
+            </div>
+            <br> <button type="submit" class="btn btn-success btn-md">Sign in</button> <br>
+
+
 </form>
-<a href= >Register</a>
+
+
+Don't have an account? <a href="register.jsp"> Sign up</a>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 </body>
+
+
+
 </html>
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+
+</html>
+
