@@ -69,6 +69,8 @@ public class UserDao implements IUserDao {
                     us = new User();
                     us.setUserName(e.getUserName());
                     us.setEmail(e.getEmail());
+                    us.setFirst_name(e.getFirst_name());
+                    us.setLast_name(e.getLast_name());
 
                 }
 

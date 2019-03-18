@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fvg
-  Date: 10/3/2019
-  Time: 8:06 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
@@ -53,8 +46,8 @@
         <div class="radio-inline col-md-2 mb-3">
 
             Gender: <br>
-            <input type="radio" name="gender" value="male" checked> M
-            <input type="radio" name="gender" value="female"> F
+            <input type="radio" name="gender" value="M" checked> M
+            <input type="radio" name="gender" value="F"> F
             <input type="radio" name="gender" value="other"> Other <br>
         </div>
 
@@ -96,7 +89,7 @@
 
         Introduce your username, email and select your password <br>
         <div class="row">
-            <div class="col-md-2 mb-3">
+            <div class="col-md-4 mb-3">
                 <input type="text" id="input_user" name="username" class="form-control" placeholder="Username">
                 <label for="inputEmail" class="sr-only"></label>
                 <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address">

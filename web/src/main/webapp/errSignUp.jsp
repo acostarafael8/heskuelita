@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 3/18/2019
+  Time: 4:20 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
@@ -16,7 +23,7 @@
 
 <body class=bg-secondary>
 
-<form action="index.jsp" method="get">
+<form action="register.jsp" method="get">
 
     <div class="container bg-light">
         <div class="jumbotron text-center bg-dark text-white">
@@ -27,7 +34,8 @@
                 </div>
                 <div class="col text-center">
 
-                    Wrong user or password
+
+                    Some data are invalid
 
                 </div>
                 <div class="col">
@@ -35,7 +43,7 @@
             </div>
             <br> <button type="submit" class="btn btn-danger btn-md">Try  again.</button> <br>
 
-            <br>Don't have an account? <a href="register.jsp"> Sign up</a>
+
 
 
         </div>

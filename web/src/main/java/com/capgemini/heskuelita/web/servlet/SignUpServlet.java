@@ -64,7 +64,7 @@ public class SignUpServlet extends HttpServlet {
 
         } catch (Exception e) {
             e.printStackTrace();
-            resp.sendRedirect ("err.jsp");
+            resp.sendRedirect ("errSignUp.jsp");
         }
 
     }

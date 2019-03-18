@@ -54,17 +54,21 @@ public class LoginServlet extends HttpServlet {
 
         try {
 
-            this.securityService.login (user);
+            User user1=this.securityService.login (user);
 
 
             HttpSession session = req.getSession ();
-            session.setAttribute ("user", user);
+            session.setAttribute ("user", user1);
             resp.sendRedirect ("home.jsp");
+
 
         } catch (Exception e) {
 
             e.printStackTrace();
             resp.sendRedirect ("err.jsp");
         }
+
+
     }
 }
+
