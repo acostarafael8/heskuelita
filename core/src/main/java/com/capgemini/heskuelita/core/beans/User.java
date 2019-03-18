@@ -1,38 +1,84 @@
 
 package com.capgemini.heskuelita.core.beans;
 
-
-import java.time.LocalDate;
-import lombok.*;
+import javax.persistence.*;
 
 
-
-@NoArgsConstructor
+@Entity
+@Table (name = "users")
 public class User {
 
+    @Id
+    @GeneratedValue (strategy = GenerationType.AUTO, generator = "users_seq")
+    @SequenceGenerator(name = "users_seq", sequenceName = "users_seq")
+    @Column (name="user_id", nullable=false, unique=true)
+    private int id;
+
+    @Column (name = "us_username", length = 60, nullable = false)
     private String userName;
 
+    @Column (name = "us_pw", length = 70, nullable = false)
     private String password;
 
+    @Column (name = "us_email", length = 120, nullable = false)
     private String email;
 
+    @Column (name = "first_name", length = 40, nullable = false)
     private String first_name;
 
+    @Column (name = "last_name", length = 40, nullable = false)
     private String last_name;
 
+    @Column (name = "birthday", length = 35, nullable = false)
     private String birthday;
 
+    @Column (name = "gender", length =120 , nullable = false)
     private String gender;
 
+    @Column (name = "doc_type", length = 40, nullable = false)
     private String docType;
 
+    @Column (name = "identification", nullable = false)
     private int identification;
 
+    @Column (name = "phone", nullable = false)
     private int phone;
 
+    @Column (name = "adress",length = 60, nullable = false)
     private String adress;
 
+    @Column (name = "zipcode", nullable = false)
     private int zipcode;
+
+    public User() {
+
+        super();
+    }
+
+    public User(String firstName, String lastName, String birthday, String gender, String docType, int identification,
+                int phone, String adress, int zipcode, String user_name, String email, String password) {
+
+        this.first_name=firstName;
+        this.last_name=lastName;
+        this.birthday=birthday;
+        this.gender=gender;
+        this.docType=docType;
+        this.identification=identification;
+        this.phone=phone;
+        this.adress=adress;
+        this.zipcode=zipcode;
+        this.userName=user_name;
+        this.email=email;
+        this.password=password;
+    }
+
+    public int getId() { return id; }
+
+    public String getUserName() { return userName; }
+
+    public String getPassword() { return password; }
+
+    public String getEmail() { return email; }
 
     public String getFirst_name() {
         return first_name;
@@ -70,16 +116,18 @@ public class User {
         return zipcode;
     }
 
-    public String getUserName() {
-        return userName;
+    public void setId(int id) { this.id = id; }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getPassword() {
-        return password;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setFirst_name(String first_name) {
@@ -118,17 +166,6 @@ public class User {
         this.zipcode = zipcode;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
 
 }

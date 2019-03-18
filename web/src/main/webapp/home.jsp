@@ -1,4 +1,5 @@
 <%@ page import="com.capgemini.heskuelita.core.beans.User" contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,8 @@
 </head>
 <body>
 
+
 <%User us = (User)session.getAttribute ("user");%>
-Bienvenido : <%=us.getUserName() + " [" + us.getEmail()  + "]"%>
+Bienvenido : <%=us.getUserName() +" " + us.getEmail()+ "  "+us.getFirst_name()%>
 </body>
 </html>

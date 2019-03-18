@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-md-3 mb-3">
                 <label>Birthday</label>
-                <input class="form-control" name="birthday" type="text" max="2001-01-01"/>
+                <input class="form-control" name="birthday" type="text" placeholder="DD/MM/YYYY"/>
             </div>
         </div>
 

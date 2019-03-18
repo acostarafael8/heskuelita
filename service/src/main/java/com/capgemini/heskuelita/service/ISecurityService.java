@@ -8,5 +8,6 @@ import com.capgemini.heskuelita.core.beans.User;
 public interface ISecurityService {
 
 
-    void login (User user) throws SecurityException;
+    User login (User user) throws SecurityException;
+    void signUp(User user) throws  SecurityException;
 }

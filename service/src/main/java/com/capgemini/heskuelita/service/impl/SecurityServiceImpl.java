@@ -22,7 +22,7 @@ public class SecurityServiceImpl implements ISecurityService {
 
 
     @Override
-    public void login (User user) throws SecurityException {
+    public User login (User user) throws SecurityException {
 
         try {
 
@@ -31,5 +31,26 @@ public class SecurityServiceImpl implements ISecurityService {
 
             throw new SecurityException(e);
         }
+
+        return user;
+
     }
+
+    @Override
+
+    public void signUp (User user) throws SecurityException{
+
+
+
+            try {
+                this.userDao.signUp(user.getFirst_name(), user.getLast_name(),user.getBirthday(),user.getGender(),
+                                    user.getDocType(),user.getIdentification(),user.getPhone(),user.getAdress(),
+                                    user.getZipcode(),user.getUserName(),user.getEmail(),user.getPassword());
+            }catch (Exception e){
+                throw new SecurityException(e);
+            }
+
+        }
+
+
 }

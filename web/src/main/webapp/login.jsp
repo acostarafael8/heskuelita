@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 
@@ -10,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Sign in</title>
+    <title>User created successfully!</title>
 
 </head>
 
@@ -23,11 +22,14 @@
         <div class="jumbotron text-center bg-dark text-white">
             <h1>Login<br></h1>
 
+            You have successfully created your user, now you can login<br>
+
             <div class="row">
                 <div class="col">
                 </div>
                 <div class="col text-center">
 
+                    <br>
                     <input type="text" name="user" class="form-control" placeholder="Username">
 
                     <input type="password" class="form-control" name="pwd" placeholder="Password">
@@ -40,13 +42,13 @@
 
             Don't have an account? <a href="register.jsp"> Sign up</a>
 
-
         </div>
 
 
     </div>
 
 </form>
+
 
 
 
