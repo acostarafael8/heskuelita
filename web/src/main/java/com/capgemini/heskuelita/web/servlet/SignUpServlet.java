@@ -43,28 +43,30 @@ public class SignUpServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        User newUser = new User();
-        newUser.setFirst_name (req.getParameter("first_name"));
-        newUser.setLast_name (req.getParameter ("last_name"));
-        newUser.setBirthday(req.getParameter("birthday"));
-        newUser.setGender(req.getParameter("gender"));
-        newUser.setDocType(req.getParameter("doc_type"));
-        newUser.setIdentification(Integer.parseInt(req.getParameter("identification")));
-        newUser.setPhone(Integer.parseInt(req.getParameter("phone")));
-        newUser.setAdress(req.getParameter("adress"));
-        newUser.setZipcode(Integer.parseInt(req.getParameter("zipcode")));
-        newUser.setUserName (req.getParameter("username"));
-        newUser.setPassword(req.getParameter("pwd"));
-        newUser.setEmail(req.getParameter("email"));
+
 
         try {
+
+            User newUser = new User();
+            newUser.setFirst_name (req.getParameter("first_name"));
+            newUser.setLast_name (req.getParameter ("last_name"));
+            newUser.setBirthday(req.getParameter("birthday"));
+            newUser.setGender(req.getParameter("gender"));
+            newUser.setDocType(req.getParameter("doc_type"));
+            newUser.setIdentification(Integer.parseInt(req.getParameter("identification")));
+            newUser.setPhone(Integer.parseInt(req.getParameter("phone")));
+            newUser.setAdress(req.getParameter("adress"));
+            newUser.setZipcode(Integer.parseInt(req.getParameter("zipcode")));
+            newUser.setUserName (req.getParameter("username"));
+            newUser.setPassword(req.getParameter("pwd"));
+            newUser.setEmail(req.getParameter("email"));
 
             this.securityService.signUp (newUser);
             resp.sendRedirect ("login.jsp");
 
         } catch (Exception e) {
             e.printStackTrace();
-            resp.sendRedirect ("errSignUp.jsp");
+            resp.sendRedirect ("error2.jsp");
         }
 
     }
